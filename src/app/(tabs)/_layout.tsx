@@ -1,22 +1,25 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 export default function TabsLayout() {
   return (
-    <Tabs
-      initialRouteName="pokedex"
-      screenOptions={{
-        tabBarActiveTintColor: "#FF1744",
-        tabBarInactiveTintColor: "#8E8E93",
-        headerStyle: {
-          backgroundColor: "#FF1744",
-        },
-        headerTintColor: "#fff",
-        headerTitleStyle: {
-          fontWeight: "bold",
-        },
-      }}
-    >
+    <>
+      <StatusBar style="light" backgroundColor="#FF1744" />
+      <Tabs
+        initialRouteName="pokedex"
+        screenOptions={{
+          tabBarActiveTintColor: "#FF1744",
+          tabBarInactiveTintColor: "#8E8E93",
+          headerStyle: {
+            backgroundColor: "#FF1744",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}
+      >
       <Tabs.Screen
         name="pokedex"
         options={{
@@ -36,5 +39,6 @@ export default function TabsLayout() {
         }}
       />
     </Tabs>
+    </>
   );
 }
