@@ -1,7 +1,11 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Favorites() {
-  return <View style={styles.container} />;
+  return (
+    <View style={styles.container}>
+      <Text>Favorites</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
